@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>hallo</name>
+	<name>MAIN</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>photo/login icon.png</name>
+			<type>1</type>
+			<location>C:/Users/user/Desktop/UTEM/SEM 3/object oriented programming/PROJECT/photo used/login icon.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>
