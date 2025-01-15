@@ -41,7 +41,8 @@ public class MainMenu extends JFrame {
     /**
      * Create the frame.
      */
-    public MainMenu() {
+    public MainMenu()
+    {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 676, 404);
         contentPane = new JPanel();
@@ -94,7 +95,7 @@ public class MainMenu extends JFrame {
         btnNewButton.setBackground(new Color(192, 192, 192));
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                LoginView frame = new LoginView();
+                CustomerLoginView frame = new CustomerLoginView();
                 frame.setVisible(true);
                 dispose();
             }

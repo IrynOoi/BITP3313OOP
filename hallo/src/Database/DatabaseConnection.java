@@ -1,46 +1,30 @@
+//To connect to database
 package Database;
-import java.sql.*;
 
-public class DatabaseConnection 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+
+public class DatabaseConnection
 {
-	String driver;
-	String dbName;
-	String connectionURL;
-	String username;
-	String password;
-	
-	public DatabaseConnection()
+	static Connection conn = null;
+	public static Connection doConnection() throws ClassNotFoundException, SQLException
 	{
-		driver = "com.mysql.cj.jdbc.Driver";
-		connectionURL = "jdbc:mysql://localhost:3306/";
-		dbName = "airlinebookingsystem"; //your database name
-		username = "root";
-		password = "";
-	}
-	
-	public Connection getConnection() throws Exception
-	{
-		Class.forName(driver);
-		Connection connection = DriverManager.getConnection(connectionURL+dbName, username, password);
-		return connection;
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/airlinebookingsystem", "root", "");
+		return conn;
 	}
 	
 	public static void main(String [] args)
 	{
-		DatabaseConnection db = new DatabaseConnection(); //(database java filename) db = new (database java filename) 
-		
 		try {
-			//Create a connection to the database
-			Connection conn = db.getConnection();
-			System.out.println("Database successfully connected!\n");
-			
-			//Close the connection
-			conn.close();
-		}
-		
-		catch(Exception e) {
+			System.out.println(DatabaseConnection.doConnection());
+		}catch(ClassNotFoundException | SQLException e)
+		{
 			e.printStackTrace();
-		}	
+		}
 	}
-
 }

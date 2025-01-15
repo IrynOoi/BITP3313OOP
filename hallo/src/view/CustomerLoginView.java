@@ -1,3 +1,4 @@
+//CustomerLoginView
 package view;
 
 import java.awt.EventQueue;
@@ -6,22 +7,29 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controller.CustomerController;
+import model.Customer;
+
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Image;
 
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 
-public class LoginView extends JFrame {
+public class CustomerLoginView extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField IDField;
+	private  JTextField passwordField;
 
 	/**
 	 * Launch the application.
@@ -30,7 +38,7 @@ public class LoginView extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					LoginView frame = new LoginView();
+					CustomerLoginView frame = new CustomerLoginView();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,7 +50,8 @@ public class LoginView extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public LoginView() {
+	public CustomerLoginView()
+	{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 745, 414);
 		contentPane = new JPanel();
@@ -57,25 +66,25 @@ public class LoginView extends JFrame {
 		lblNewLabel.setBounds(25, 11, 227, 83);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("USERNAME :");
+		JLabel lblNewLabel_1 = new JLabel("CUSTOMER ID :");
 		lblNewLabel_1.setFont(new Font("Tw Cen MT Condensed", Font.BOLD, 18));
-		lblNewLabel_1.setBounds(25, 140, 103, 48);
+		lblNewLabel_1.setBounds(10, 141, 103, 48);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("PASSWORD :");
 		lblNewLabel_2.setFont(new Font("Tw Cen MT Condensed", Font.BOLD, 18));
-		lblNewLabel_2.setBounds(26, 200, 102, 54);
+		lblNewLabel_2.setBounds(25, 200, 102, 54);
 		contentPane.add(lblNewLabel_2);
 		
-		textField = new JTextField();
-		textField.setBounds(123, 140, 253, 35);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		IDField = new JTextField();
+		IDField.setBounds(123, 140, 253, 35);
+		contentPane.add(IDField);
+		IDField.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(123, 210, 253, 36);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		passwordField = new JTextField();
+		passwordField.setBounds(123, 210, 253, 36);
+		contentPane.add(passwordField);
+		passwordField.setColumns(10);
 		
 		 // Load and scale the image
         ImageIcon icon = new ImageIcon(this.getClass().getResource("/login icon.png"));
@@ -105,8 +114,37 @@ public class LoginView extends JFrame {
 		
 		JButton btnOk = new JButton("OK");
 		btnOk.setBackground(new Color(192, 192, 192));
-		btnOk.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnOk.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				int ID = Integer.parseInt(IDField.getText().trim());
+				String Password = passwordField.getText().trim();
+
+				Customer customer = new Customer();
+				customer.setCustomerID(ID);
+				customer.setPassword(Password);
+
+				String role = "";
+				 CustomerController custcontroller = new CustomerController();
+				try {
+					role = custcontroller.doLogin(customer);
+
+					if (role == "-1") {
+						JOptionPane.showMessageDialog(null, "You are not authorized!!!");
+					} else {
+						int idcore = Integer.parseInt( IDField.getText().trim());
+						JOptionPane.showMessageDialog(null, "Successful!");
+						CustomerMainMenu frame = new CustomerMainMenu(idcore);
+						frame.setVisible(true);
+						dispose();
+
+					}
+
+				} catch (ClassNotFoundException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnOk.setBounds(248, 286, 125, 36);
