@@ -14,6 +14,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
 import javax.swing.JTextField;
@@ -139,6 +141,16 @@ public class CustomerAcc extends JFrame {
 		BACKbtn.setBackground(new Color(192, 192, 192));
 		BACKbtn.setBounds(660, 410, 117, 43);
 		CusIDTextField.add(BACKbtn);
+		BACKbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)
+			{
+				CustomerMainMenu frame = new CustomerMainMenu(idnum);
+                 frame.setVisible(true);
+                 dispose();
+			}
+		});
+		
+		
 		try {
 		    Customer customer = new Customer();
 		    customer.setCustomerID(idnum);
