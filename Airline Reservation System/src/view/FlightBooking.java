@@ -51,7 +51,7 @@ public class FlightBooking extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("READY TO TAKE OFF456?");
+		JLabel lblNewLabel = new JLabel("READY TO TAKE OFF?");
 		lblNewLabel.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 30));
 		lblNewLabel.setBounds(29, 10, 246, 41);
 		contentPane.add(lblNewLabel);
