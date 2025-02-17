@@ -81,7 +81,7 @@ public class MainMenu extends JFrame {
         panel.setLayout(null);
         
         // Create the JLabel for "MAIN MENU" with dynamic resizing
-        JLabel lblNewLabel = new JLabel("MAIN MENU9090");
+        JLabel lblNewLabel = new JLabel("MAIN MENU");
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 24));
         lblNewLabel.setBounds(32, 131, 235, 57); // Static bounds, but we could dynamically calculate this later
