@@ -7,10 +7,10 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="photo"/>
-	<classpathentry kind="lib" path="C:/Users/xienx/Desktop/UTEM/SEM 3/object oriented programming/PROJECT/external library/mysql-connector-java-5.1.22/mysql-connector-java-5.1.22-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Users/xienx/Desktop/UTEM/SEM 3/object oriented programming/PROJECT/external library/io-7.1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/xienx/Desktop/UTEM/SEM 3/object oriented programming/PROJECT/external library/kernel-7.1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/xienx/Desktop/UTEM/SEM 3/object oriented programming/PROJECT/external library/layout-7.1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/xienx/Desktop/UTEM/SEM 3/object oriented programming/PROJECT/external library/slf4j-api-2.1.0-alpha1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ASUS/Desktop/大学/external library/kernel-7.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ASUS/Desktop/大学/external library/io-7.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ASUS/Desktop/大学/external library/layout-7.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ASUS/Desktop/大学/external library/mysql-connector-java-5.1.22.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ASUS/Desktop/大学/external library/slf4j-api-2.1.0-alpha1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
