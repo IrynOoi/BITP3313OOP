@@ -1,8 +1,40 @@
-## Mini  Project for Object Oriented Programming
+# ✈️ Airline Reservation System (Mini  Project for Object Oriented Programming)
 
-The Airline Reservation System is designed to provide customers with a convenient and efficient way to manage their flight bookings online. Through this system, users can easily make flight reservations, view and update their personal profiles, and manage their existing bookings.
 
-In addition, the system includes a booking restoration feature, allowing customers to restore deleted bookings within 3 days if needed. After the 3-day grace period, any un-restored booking will be permanently deleted from the system to maintain data accuracy and efficiency.After booking for the seat,they will get booking ticket afterwards which store as pdf.
+## 📌 Overview
+The **Airline Reservation System** is a Java Swing desktop application integrated with a MySQL database. It provides a complete platform for users to register, manage profiles, book flights, and handle reservations in one place.
+
+The project follows an **MVC (Model-View-Controller)** architecture and demonstrates practical Object-Oriented Programming (OOP) concepts in a real-world booking system.
+
+---
+
+## 🎯 Objectives
+- Build a full-featured airline booking system
+- Implement authentication and profile management
+- Enable flight and seat booking with pricing logic
+- Provide booking management with recovery options
+- Integrate database operations and PDF ticket generation
+
+---
+
+## ⚙️ Features
+
+### 🔐 Authentication & User Management
+- User registration and login
+- Profile management and updates
+
+### ✈️ Booking System
+- Flight and seat selection
+- Optional baggage add-on
+- Automatic total price calculation
+
+### 📂 Booking Management
+- View bookings
+- Soft delete bookings (with recovery window)
+- Restore deleted bookings
+
+### 🧾 Output
+- Export booking details as **PDF tickets**
 
 <br><br>
 <img width="539" height="321" alt="image" src="https://github.com/user-attachments/assets/c02fc44a-d81d-4f90-a6b1-1c3485c083c1" />
