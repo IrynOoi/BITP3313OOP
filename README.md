@@ -2,7 +2,7 @@
 
 
 ## 📌 Overview
-The **Airline Reservation System** is a Java Swing desktop application integrated with a MySQL database. It provides a complete platform for users to register, manage profiles, book flights, and handle reservations in one place.
+The **Airline Reservation System** is a Java Swing  desktop standalone app integrated with a MySQL database. It provides a complete platform for users to register, manage profiles, book flights, and handle reservations in one place.
 
 The project follows an **MVC (Model-View-Controller)** architecture and demonstrates practical Object-Oriented Programming (OOP) concepts in a real-world booking system.
 
